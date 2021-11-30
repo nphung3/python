@@ -1,0 +1,45 @@
+from random import randint 
+
+print("Input rock, paper or scissors:")
+player = input()
+computer = randint(0,2)
+
+
+
+if computer == 0:
+	computer = "Rock"
+if computer == 1:
+	computer = "Scissors"
+if computer == 2:
+	computer = "Paper"
+
+
+print("___")
+print("You choose:" + player)
+print("computer choose:" + computer)
+print("___")
+
+if player == computer:
+	print("Draw")
+else:
+
+
+	if player == "Scissors":
+		if computer == "Rock":
+			print("Lose")
+		else:
+			print("Win")
+	elif player == "Rock":
+		if computer == "Paper":
+			print("Lose")
+		else:
+			print("Win")
+	elif player == "Paper":
+		if computer == "Rock":
+			print("Win")
+		else:
+			print("Lose")
+
+
+	else:
+		print("Wrong input")
